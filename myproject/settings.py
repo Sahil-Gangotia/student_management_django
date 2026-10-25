@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-z8z8232!+5t4gh2)pk(*#%g7@!*zyx5fyl907pvi8k65)vxlss
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # Ya specific likh sakte hain: ['studentmanagementdjango.vercel.app', '.vercel.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -126,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
